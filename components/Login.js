@@ -5,7 +5,7 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      username: ''
     };
   }
   onLogin() {
@@ -16,15 +16,18 @@ export default class Login extends Component {
   render() {
     return (
       <View style={style.container}>
-        <View><Image style={{width: 150, height: 150}} source={{uri: 'https://filestore.hasura.io/v1/file/7723c234-4263-4599-9568-9d6788138c5b'}} /></View>
+        <View>
+          <Image
+            style={{ width: 150, height: 150 }}
+            source={{
+              uri: 'https://filestore.hasura.io/v1/file/7723c234-4263-4599-9568-9d6788138c5b'
+            }}
+          />
+        </View>
         <View style={style.loginContainer}>
           <Text>Username:</Text>
           <TextInput style={style.input} onChangeText={text => this.setState({ username: text })} />
-          <Button
-            onPress={this.onLogin.bind(this)}
-            title="Login"
-            color="#841584"
-          />
+          <Button onPress={this.onLogin.bind(this)} title="Login" color="#841584" />
         </View>
       </View>
     );
